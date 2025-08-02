@@ -3,16 +3,12 @@
 # Steps -:
 
 #Add the Prometheus Community repository:
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+1.helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+2. helm search repo prometheus-community
+3. helm search repo prometheus-community/kube-prometheus-stack
 
-# You can search for available charts:
-helm search repo prometheus-community
-
-#To search specifically for the kube-prometheus-stack:
-helm search repo prometheus-community/kube-prometheus-stack
-
-#install version 45.7.1 of the Kube Prometheus Stack. Here's the installation command:
-helm install prometheus prometheus-community/kube-prometheus-stack --version 45.7.1 --namespace monitoring --create-namespace
+** Install version 45.7.1 of the Kube Prometheus Stack. Here's the installation command:
+    helm install prometheus prometheus-community/kube-prometheus-stack --version 45.7.1 --namespace monitoring --create-namespace
 
 This installation deploys four main components into your Kubernetes cluster:
 
